@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@font-face {
+  font-family: "AvenirLTStd-Roman";
+  src: url("./assets/fonts/AvenirLTStd-Roman1.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Light";
+  src: url("./assets/fonts/AvenirLTStd-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaLTStd-BoldCond";
+  src: url("./assets/fonts/HelveticaLTStd-BoldCond.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "HelveticaLTStd-Roman";
+  src: url("./assets/fonts/Helvetica-Neue-LT-Std-55-Roman.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("./assets/fonts/Roboto-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("./assets/fonts/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}

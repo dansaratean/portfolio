@@ -1,0 +1,97 @@
+.header {
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .visible {
+    display: none;
+  }
+
+  .mat-menu-item {
+    font-family: AvenirLTStd-Light;
+  }
+
+  .logo {
+    font-family: AvenirLTStd-Light;
+    margin-left: 25px;
+    letter-spacing: 2px;
+
+    h1 {
+      font-size: 3em;
+      font-weight: lighter;
+      span {
+        font-weight: 600;
+    }
+  }
+}
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 1.5em;
+    align-items: center;
+    margin-right: 5px;
+    font-family: AvenirLTStd-Light;
+
+    a {
+      text-decoration: none;
+      padding: 20.5px 0;
+      color: black;
+    }
+
+    a:hover {
+      // transition-delay: 0.3s;
+      background-color: #EAEFFC;
+    }
+
+    a:active {
+      color: inherit;
+    }
+
+    li {
+      margin: 0 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+.header {
+
+    ul {
+      font-size: 1.3em;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+.header {
+  height: 50px;
+
+    ul {
+      font-size: 1.1em;
+
+      li {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 745px) {
+.header {
+  justify-content: space-around;
+
+    .visible {
+      display: block;
+    }
+
+    ul {
+      display: none;
+    }
+  }
+}

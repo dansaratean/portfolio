@@ -5,11 +5,9 @@ import { imports } from './app.imports';
 
 
 import { AppComponent } from './root/app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-
 
 @NgModule({
-  declarations: [ components, NavbarComponent ],
+  declarations: [ components ],
   imports: [ imports ],
   entryComponents: [ components ],
   providers: [],

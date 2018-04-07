@@ -1,3 +1,27 @@
-<mat-toolbar>
-  <span>This is my toolbar</span>
-</mat-toolbar>
+  <div class="header">
+    <div class="logo">
+      <h1>dan<span>saratean</span></h1>
+    </div>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" class='visible'>
+      <mat-icon>list</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <ul>
+        <button mat-menu-item>About</button>
+        <button mat-menu-item>Hand Drawings</button>
+        <button mat-menu-item>Digital Drawings</button>
+        <button mat-menu-item>String art</button>
+        <button mat-menu-item>Contact</button>
+      </ul>
+    </mat-menu>
+
+    <ul>
+      <a href="#"><li>About</li></a>
+      <a href="#"><li>Hand Drawings</li></a>
+      <a href="#"><li>Digital Drawings</li></a>
+      <a href="#"><li>String art</li></a>
+      <a href="#"><li>Contact</li></a>
+    </ul>
+  </div>
