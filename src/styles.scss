@@ -40,8 +40,15 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
+body {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  background-color: #F7F3DE;
 }
