@@ -22,10 +22,9 @@
   }
 
   .image-wrapper {
+    border: 2px solid black;
     width: 80%;
     position:relative;
-    right: 30px;
-    left: 0;
     height: 95%;
     margin:0 auto;
 
@@ -140,68 +139,80 @@
 
 @media screen and (max-width: 1250px) {
   .wrapper {
+    flex-direction: column;
+    overflow: auto;
+    justify-content: flex-start;
+
     .sidenav {
-      display: none;
+      order: 2;
+      border: 2px solid black;
+      position: relative;
+      right: 30px;
+      left: 0;
+      min-height: 100px;
+      margin-bottom: 20px;
+      height: auto;
+      width: 95%;
     }
 
     .image-wrapper {
+      margin-top: 20px;
+      margin-bottom: 20px;
       width: 95%;
+      height: 90%;
+      order: 1;
     }
   }
 }
 
 @media screen and (max-width: 1000px) {
   .wrapper {
-    position: absolute;
     top: 50px;
     height: 91.5%;
+
+    .image-wrapper {
+      max-height: 60%;
+    }
   }
 }
 
 @media screen and (max-width: 850px) {
   .wrapper {
-
     .image-wrapper {
       width: 95%;
-      max-height: 70%;
-      margin-top: 20px;
-      align-self: flex-start;
+      max-height: 50%;
     }
   }
 }
 
 @media screen and (max-width: 750px) {
   .wrapper {
-
     .image-wrapper {
-      width: 95%;
-      max-height: 50%;
-      margin-top: 20px;
-      align-self: flex-start;
+      max-height: 40%;
     }
   }
 }
 
 @media screen and (max-width: 650px) {
   .wrapper {
-
     .image-wrapper {
-      width: 95%;
-      max-height: 40%;
-      margin-top: 20px;
-      align-self: flex-start;
+      max-height: 35%;
     }
   }
 }
 
 @media screen and (max-width: 450px) {
   .wrapper {
-
     .image-wrapper {
-      width: 95%;
       max-height: 30%;
-      margin-top: 20px;
-      align-self: flex-start;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .wrapper {
+    .image-wrapper {
+      max-height: 20%;
     }
   }
 }

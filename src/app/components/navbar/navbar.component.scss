@@ -22,6 +22,12 @@
     font-family: AvenirLTStd-Light;
     letter-spacing: 2px;
 
+    a {
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+    }
+
     h1 {
       font-size: 3em;
       font-weight: lighter;
@@ -42,6 +48,7 @@
     font-family: AvenirLTStd-Light;
 
     a {
+      cursor: pointer;
       transition: background-color 0.5s ease;
       text-decoration: none;
       padding: 21.5px 0;
@@ -66,18 +73,22 @@
 .header {
 
     ul {
-      font-size: 1.1em;
+      font-size: 1.3em;
 
       a {
-        padding: 23.5px 0;
+        padding: 21.5px 0;
       }
     }
   }
 }
 
 @media screen and (max-width: 1000px) {
-.header {
-  height: 50px;
+  .header {
+    height: 50px;
+
+    .logo {
+      font-size: 14px;
+    }
 
     ul {
       font-size: 1.1em;
@@ -96,7 +107,7 @@
 
 @media screen and (max-width: 850px) {
 .header {
-  justify-content: space-around;
+  justify-content: space-evenly;
 
     .visible {
       display: block;
@@ -104,6 +115,16 @@
 
     ul {
       display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header {
+    justify-content: center;
+
+    .logo {
+      font-size: 12px;
     }
   }
 }

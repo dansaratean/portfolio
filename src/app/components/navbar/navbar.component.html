@@ -1,6 +1,6 @@
   <div class="header">
     <div class="logo">
-      <h1>dan<span>saratean</span></h1>
+      <a (click)="router.navigate(['/content'])"><h1>dan<span>saratean</span></h1></a>
     </div>
 
     <button mat-icon-button [matMenuTriggerFor]="menu" class='visible'>
@@ -18,10 +18,11 @@
     </mat-menu>
 
     <ul>
-      <a href="#"><li>About</li></a>
-      <a href="#"><li>Graphical</li></a>
-      <a href="#"><li>Digital</li></a>
-      <a href="#"><li>String art</li></a>
-      <a href="#"><li>Contact</li></a>
+      <a ><li>About</li></a>
+      <a ><li>Graphical</li></a>
+      <a ><li>Digital</li></a>
+      <a ><li>String art</li></a>
+      <a (click)="router.navigate(['/contact'])"><li>Contact</li></a>
     </ul>
   </div>
+  <router-outlet></router-outlet>
