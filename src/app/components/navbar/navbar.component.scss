@@ -20,12 +20,12 @@
 
   .logo {
     font-family: AvenirLTStd-Light;
-    // margin-left: 25px;
     letter-spacing: 2px;
 
     h1 {
       font-size: 3em;
       font-weight: lighter;
+
       span {
         font-weight: 600;
     }
@@ -42,14 +42,14 @@
     font-family: AvenirLTStd-Light;
 
     a {
+      transition: background-color 0.5s ease;
       text-decoration: none;
       padding: 21.5px 0;
       color: black;
     }
 
     a:hover {
-      // transition-delay: 0.3s;
-      background-color: #EAEFFC;
+      background-color: #F7F3DE;
     }
 
     a:active {

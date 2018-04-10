@@ -1,18 +1,224 @@
 .wrapper {
   display: flex;
   top: 70px;
-  height: 90%;
+  height: 89%;
   flex: 1;
   position: absolute;
   width: 99%;
   margin: 25px 10px 10px 10px;
   border: 2px solid black;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+
+  .sidenav {
+    border: 2px solid black;
+    position: relative;
+    left: 30px;
+    right: auto;
+    height: 95%;
+    width: 15%;
+  }
+
+  .image-wrapper {
+    width: 80%;
+    position:relative;
+    right: auto;
+    left: 0;
+    height: 95%;
+    margin:0 auto;
+
+     img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+    }
+  }
+
+@-webkit-keyframes FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  91% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  91% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  91% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  91% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.five {
+  animation-name: FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 22.5s;
+  animation-delay: 0s;
+  animation-direction: normal;
+}
+
+  .four {
+    animation-name: FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 22.5s;
+    animation-delay: 4.5s;
+    animation-direction: normal;
+  }
+
+    .three {
+      animation-name: FadeInOut;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 22.5s;
+      animation-delay: 9s;
+      animation-direction: normal;
+    }
+
+      .two {
+        animation-name: FadeInOut;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 22.5s;
+        animation-delay: 13.5s;
+        animation-direction: normal;
+      }
+
+        .one {
+          animation-name: FadeInOut;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          animation-duration: 22.5s;
+          animation-delay: 18s;
+          animation-direction: normal;
+        }
 
 }
+
 
 @media screen and (max-width: 1000px) {
   .wrapper {
     position: absolute;
     top: 50px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .wrapper {
+    .sidenav {
+      display: none;
+    }
+
+    .image-wrapper {
+      width: 95%;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .wrapper {
+
+    .image-wrapper {
+      width: 95%;
+      max-height: 70%;
+      margin-top: 20px;
+      align-self: flex-start;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .wrapper {
+
+    .image-wrapper {
+      width: 95%;
+      max-height: 50%;
+      margin-top: 20px;
+      align-self: flex-start;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .wrapper {
+
+    .image-wrapper {
+      width: 95%;
+      max-height: 40%;
+      margin-top: 20px;
+      align-self: flex-start;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+
+    .image-wrapper {
+      width: 95%;
+      max-height: 30%;
+      margin-top: 20px;
+      align-self: flex-start;
+    }
   }
 }
