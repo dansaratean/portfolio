@@ -1,14 +1,14 @@
 .header {
   height: 70px;
-  background-color: white;
+  background-color: #ffffff;
+  background: url('transparent_background_2.jpg');
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  width: 99%;
+  // border: 2px solid black;
+  width: 100%;
   z-index: 999;
-  border: 2px solid black;
-  margin: 10px;
 
   .visible {
     display: none;
@@ -51,12 +51,12 @@
       cursor: pointer;
       transition: background-color 0.5s ease;
       text-decoration: none;
-      padding: 21.5px 0;
+      padding: 22.5px 0;
       color: black;
     }
 
     a:hover {
-      background-color: #F7F3DE;
+      background-color: #ffffff;
     }
 
     a:active {
