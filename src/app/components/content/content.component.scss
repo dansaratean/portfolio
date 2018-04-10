@@ -1,7 +1,8 @@
 .wrapper {
   display: flex;
   top: 70px;
-  height: 89%;
+  height: 89.5%;
+  overflow: hidden;
   flex: 1;
   position: absolute;
   width: 99%;
@@ -23,7 +24,7 @@
   .image-wrapper {
     width: 80%;
     position:relative;
-    right: auto;
+    right: 30px;
     left: 0;
     height: 95%;
     margin:0 auto;
@@ -55,24 +56,6 @@
 }
 
 @-moz-keyframes FadeInOut {
-  0% {
-    opacity: 1;
-  }
-  13% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0;
-  }
-  91% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes FadeInOut {
   0% {
     opacity: 1;
   }
@@ -155,14 +138,6 @@
 
 }
 
-
-@media screen and (max-width: 1000px) {
-  .wrapper {
-    position: absolute;
-    top: 50px;
-  }
-}
-
 @media screen and (max-width: 1250px) {
   .wrapper {
     .sidenav {
@@ -172,6 +147,14 @@
     .image-wrapper {
       width: 95%;
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    position: absolute;
+    top: 50px;
+    height: 91.5%;
   }
 }
 
