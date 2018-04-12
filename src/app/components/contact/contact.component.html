@@ -1,3 +1,77 @@
 <div class="wrapper">
+  <div class="left">
+    <div class="contact-me">
+      <p>contact me</p>
+      <!-- <span>..or view my CV</span> -->
+    </div>
+    <div class="visit-card">
+      <div class="data">
+        <ul>
+          <li><p>{{ contact.name }}</p></li>
+          <li><p>{{ contact.email }}</p></li>
+          <li><p>{{ contact.phone }}</p></li>
+        </ul>
+      </div>
+      <div class="title">
+        <ul>
+          <li><p>name</p></li>
+          <li><p>email</p></li>
+          <li><p>phone</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cv">
+      <!-- <button mat-raised-button>CV</button> -->
+    </div>
+  </div>
+  <div class="right">
+    <div class="contact-me">
+      <p>leave a comment</p>
+      <span>...or place an order</span>
+    </div>
+    <div class="contact-form-wrapper">
 
+      <form class="contact-form" [formGroup]="contactForm">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="name" formControlName="name">
+        </mat-form-field><br>
+
+        <mat-form-field class="full-width">
+          <input matInput placeholder="email" [formGroup]="contactForm" [formControl]="email" required>
+          <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+            please enter a valid email address
+          </mat-error>
+        </mat-form-field><br>
+
+        <mat-form-field class="full-width">
+          <textarea
+            matInput
+            matTextareaAutosize
+            matAutosizeMinRows="1"
+            matAutosizeMaxRows="6"
+            formControlName="message"
+            placeholder="message"
+            required>
+          </textarea>
+        </mat-form-field>
+
+        <mat-checkbox [(ngModel)]="isChecked" color="primary" formControlName="checkbox">I would like to place an order</mat-checkbox>
+
+        <div class="order" *ngIf="isChecked">
+          <mat-form-field class="full-width">
+            <mat-select [(value)]="selected" formControlName="select" placeholder="please select an option">
+              <mat-option>none</mat-option>
+              <mat-option value="option1">portret</mat-option>
+              <mat-option value="option2">string-art</mat-option>
+              <mat-option value="option3">custom</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <p>please describe your choice in the message box above</p>
+        </div>
+
+        <!-- <button mat-raised-button>Send</button> -->
+
+      </form>
+    </div>
+  </div>
 </div>

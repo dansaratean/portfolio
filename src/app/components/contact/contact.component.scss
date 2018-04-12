@@ -3,12 +3,123 @@
   top: 70px;
   height: 95%;
   overflow: hidden;
-  flex: 1;
   position: absolute;
   width: 100%;
-  // margin: 25px 10px 10px 10px;
   background-color: #ffffff;
   // border: 2px solid black;
   justify-content: center;
   align-items: center;
+
+  .left {
+    height: 100%;
+    width: 40%;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    font-family: AvenirLTStd-Roman;
+    align-items: flex-end;
+
+    .contact-me {
+      margin-top: 350px;
+      margin-right: 60px;
+      margin-bottom: 82px;
+      font-family: AvenirLTStd-Roman;
+      align-self: flex-end;
+
+      p {
+        letter-spacing: 1px;
+        font-size: 3em;
+      }
+    }
+
+    .visit-card {
+      display: flex;
+      font-family: AvenirLTStd-Light;
+      font-size: 1.3em;
+      justify-content: flex-end;
+      align-items: center;
+
+      .title {
+        text-align: center;
+
+        ul li {
+          padding: 5px 0 5px 5px;
+          margin-right: 60px;
+          list-style-type: none;
+        }
+      }
+
+      .data {
+        font-style: oblique;
+        text-align: right;
+
+        ul li {
+          color: #BC5770;
+          padding: 5px 10px;
+          list-style-type: none;
+          border-right: 1px solid black;
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+    height: 100%;
+
+    .contact-form-wrapper {
+      margin-left: 60px;
+
+      .contact-form {
+        min-width: 320px;
+        max-width: 500px;
+        width: 100%;
+
+        .full-width {
+          width: 100%;
+          font-family: AvenirLTStd-Roman;
+
+          mat-select {
+            font-family: AvenirLTStd-Roman;
+            font-size: 1.3em;
+          }
+        }
+
+        mat-checkbox {
+          font-family: AvenirLTStd-Light;
+        }
+
+        p {
+          font-family: AvenirLTStd-Light;
+          color: #BC5770;
+        }
+
+        .order {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .contact-me {
+      margin-top: 350px;
+      margin-left: 60px;
+      margin-bottom: 50px;
+      font-family: AvenirLTStd-Roman;
+      align-self: flex-start;
+
+      p {
+        letter-spacing: 1px;
+        font-size: 3em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+
+  }
 }
