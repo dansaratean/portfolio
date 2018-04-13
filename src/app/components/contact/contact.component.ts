@@ -10,7 +10,7 @@ import { FormControl, Validators, ReactiveFormsModule, FormGroup } from '@angula
   encapsulation: ViewEncapsulation.None
 })
 export class ContactComponent implements OnInit {
-  email = new FormControl('', [Validators.required, Validators.email]);
+  _replyto = new FormControl('', [Validators.required, Validators.email]);
 
   contactForm = new FormGroup({
     name: new FormControl(),
