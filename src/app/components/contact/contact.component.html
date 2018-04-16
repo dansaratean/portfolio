@@ -30,49 +30,119 @@
     </div>
     <div class="contact-form-wrapper">
 
+      <!-- <form
+        class="contact-form"
+        method="POST"
+        action="https://formspree.io/claudiu.fratila@gmail.com">
+            <input
+              [(ngModel)]="name"
+              placeholder="name"
+              type="text"
+              name='name'>
+          <br>
+            <input
+              [(ngModel)]="email"
+              placeholder="email"
+              name='email'
+              type='email'
+              required>
+          <br>
+
+            <textarea
+              [(ngModel)]="message"
+              matTextareaAutosize
+              matAutosizeMinRows="1"
+              matAutosizeMaxRows="6"
+              placeholder="message"
+              name="message"
+              type="text"
+              required>
+            </textarea>
+            <br />
+
+
+          <input type="checkbox" [(ngModel)]="isChecked" name="checkbox">I would like to place an order
+          <br>
+
+          <div class="order" *ngIf="isChecked">
+
+              <select [(value)]="selected" [(ngModel)]="option" placeholder="please select an option" name="option">
+                <option>none</option>
+                <option value="option1">portret</option>
+                <option value="option2">string-art</option>
+                <option value="option3">custom</option>
+              </select>
+
+            <p>please describe your choice in the message box above</p>
+          </div>
+
+          <input type="submit" value="send">
+
+      </form> -->
+
       <form
         class="contact-form"
-        [formGroup]="contactForm"
-        action="https://formspree.io/claudiu.fratila@gmail.com"
-        method="POST">
-        <mat-form-field class="full-width">
-          <input matInput placeholder="name" formControlName="name">
-        </mat-form-field><br>
+        method="POST"
+        action="https://formspree.io/claudiu.fratila@gmail.com">
+          <!-- <mat-form-field class="full-width"> -->
+            <input
+              placeholder="name"
+              type="text"
+              name='name'>
+          <!-- </mat-form-field> -->
+          <br>
 
-        <mat-form-field class="full-width">
-          <input matInput placeholder="email" [formGroup]="contactForm" [formControl]="_replyto" required>
-          <mat-error *ngIf="_replyto.hasError('email') && !_replyto.hasError('required')">
-            please enter a valid email address
-          </mat-error>
-        </mat-form-field><br>
+          <!-- <mat-form-field class="full-width"> -->
+            <input
+              placeholder="email"
+              name='email'
+              type='email'
+              required>
+          <!-- </mat-form-field> -->
+          <br>
 
-        <mat-form-field class="full-width">
-          <textarea
-            matInput
-            matTextareaAutosize
-            matAutosizeMinRows="1"
-            matAutosizeMaxRows="6"
-            formControlName="message"
-            placeholder="message"
-            required>
-          </textarea>
-        </mat-form-field>
+          <!-- <mat-form-field class="full-width">
+            <input
+              matInput
+              ngModel
+              placeholder="email"
+              formControlName="email"
+              [formControl]="email"
+              required>
+            <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+              please enter a valid email address
+            </mat-error>
+          </mat-form-field><br> -->
 
-        <mat-checkbox [(ngModel)]="isChecked" color="primary" formControlName="checkbox">I would like to place an order</mat-checkbox><br>
+          <!-- <mat-form-field class="full-width"> -->
+            <textarea
+              name="message"
+              type="text"
+              placeholder="message"
+              required></textarea>
+            <br />
+          <!-- </mat-form-field> -->
 
-        <div class="order" *ngIf="isChecked">
-          <mat-form-field class="full-width">
-            <mat-select [(value)]="selected" formControlName="select" placeholder="please select an option">
-              <mat-option>none</mat-option>
-              <mat-option value="option1">portret</mat-option>
-              <mat-option value="option2">string-art</mat-option>
-              <mat-option value="option3">custom</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <p>please describe your choice in the message box above</p>
-        </div>
+          <input type="checkbox" [(ngModel)]="isChecked" name="checkbox">I would like to place an order
+          <br>
 
-        <button mat-raised-button type="submit" value="Send" class='submit'>Send</button>
+          <div class="order" *ngIf="isChecked">
+            <!-- <mat-form-field class="full-width"> -->
+              <select [(value)]="selected" placeholder="please select an option" name="option">
+                <option>none</option>
+                <option value="option1">portret</option>
+                <option value="option2">string-art</option>
+                <option value="option3">custom</option>
+              </select>
+            <!-- </mat-form-field> -->
+            <p>please describe your choice in the message box above</p>
+          </div>
+
+          <input type="submit" value="send">
+          <!-- <div class="submit">
+            <button mat-raised-button type="submit">send</button>
+
+          </div> -->
 
       </form>
     </div>

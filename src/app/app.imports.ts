@@ -4,8 +4,9 @@ import { AppMaterialModule } from './app-material.module';
 import { routing } from './app.routing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 export const imports = [
-  BrowserModule, BrowserAnimationsModule, AppMaterialModule,
+  BrowserModule, HttpClientModule, BrowserAnimationsModule, AppMaterialModule,
   routing, ReactiveFormsModule, FormsModule
 ];

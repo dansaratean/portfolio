@@ -1,25 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { FormControl, Validators, ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { FormControl, Validators, ReactiveFormsModule, FormGroup, NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class ContactComponent implements OnInit {
-  _replyto = new FormControl('', [Validators.required, Validators.email]);
 
-  contactForm = new FormGroup({
-    name: new FormControl(),
-    message: new FormControl(),
-    checkbox: new FormControl(),
-    select: new FormControl()
-  });
-
+  name: string;
+  email: string;
+  message: string;
   isChecked: boolean;
+  option: string;
+
+  // contactForm = new FormGroup({
+  //   name: new FormControl(),
+  //   // email: new FormControl('', [Validators.required, Validators.email]),
+  //   email: new FormControl(),
+  //   message: new FormControl(),
+  //   checkbox: new FormControl(),
+  //   select: new FormControl()
+  // });
+
+  // user = {
+  //   name: '',
+  //   email: '',
+  //   message: '',
+  //   option: ''
+  // }
 
   contact = {
     name: 'dan saratean',
@@ -28,14 +41,38 @@ export class ContactComponent implements OnInit {
     phone: 'xxxxxxxxx',
   };
 
-  constructor(public router: Router) { }
+  constructor(public router: Router, public http: HttpClient ) { }
 
   ngOnInit() {
   }
 
-  // getErrorMessage() {
-  //   return this.contactForm['email'].hasError('required') ? 'You must enter a value' :
-  //       this.contactForm['email'].hasError('email') ? 'Not a valid email' : '';
-  // }
+  onSubmit() {
+    // this.submitted = true;
+
+    // console.log(this.name);
+    // console.log(this.email);
+    // console.log(this.message);
+    // console.log(this.isChecked);
+    // console.log(this.option);
+    // console.log('FORM.VALUE: ' + form.value.name);
+    // this.user.name = form.value.contactForm.name;
+    //
+  //   this.http.post("https://formspree.io/claudiu.fratila@gmail.com", {
+  //     name: form.value.name,
+  //     email: form.value.email,
+  //     message: form.value.message,
+  //     check: form.value.checkbox,
+  //     option: form.value.select
+  // }).subscribe(
+  //     res => { console.log(res); },
+  //     err => { console.log(err); }
+  //   )
+
+    // this.http.post("https://formspree.io/claudiu.fratila@gmail.com", form.value.name).subscribe(
+    //   res => { console.log(res); },
+    //   err => { console.log(err); }
+    // )
+
+  }
 
 }
