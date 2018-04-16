@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <div class="left">
+    Some stuff here
+  </div>
+  <div class="right">
+    <div class="right-wrapper">
+      <div class="card-wrapper" *ngFor="let card of data">
+        <mat-card>
+          <img mat-card-image src="{{ card.src }}" alt='No Image Available'> 
+          <mat-card-title>{{ card.title }}</mat-card-title>
+          <mat-card-actions>
+            Some footer
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

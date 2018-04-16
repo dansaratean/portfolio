@@ -30,6 +30,8 @@
     </div>
     <div class="contact-form-wrapper">
 
+      <h1>Form submission comming soon!</h1>
+
       <!-- <form
         class="contact-form"
         method="POST"
@@ -80,28 +82,31 @@
 
       </form> -->
 
-      <form
+      <!-- <form
         class="contact-form"
         method="POST"
-        action="https://formspree.io/claudiu.fratila@gmail.com">
-          <!-- <mat-form-field class="full-width"> -->
+        action="https://formspree.io/claudiu.fratila@gmail.com"
+        [formGroup]="contactForm"
+        ngSubmit="onSubmit(f)"
+        #f>
+          <mat-form-field class="full-width">
             <input
               placeholder="name"
               type="text"
               name='name'>
-          <!-- </mat-form-field> -->
+          </mat-form-field>
           <br>
 
-          <!-- <mat-form-field class="full-width"> -->
+          <mat-form-field class="full-width">
             <input
               placeholder="email"
               name='email'
               type='email'
               required>
-          <!-- </mat-form-field> -->
+          </mat-form-field>
           <br>
 
-          <!-- <mat-form-field class="full-width">
+          <mat-form-field class="full-width">
             <input
               matInput
               ngModel
@@ -112,18 +117,18 @@
             <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
               please enter a valid email address
             </mat-error>
-          </mat-form-field><br> -->
+          </mat-form-field><br>
 
-          <!-- <mat-form-field class="full-width"> -->
+          <mat-form-field class="full-width">
             <textarea
               name="message"
               type="text"
               placeholder="message"
               required></textarea>
             <br />
-          <!-- </mat-form-field> -->
+          </mat-form-field>
 
-          <!-- <input type="checkbox" [(ngModel)]="isChecked" name="checkbox">I would like to place an order
+          <input type="checkbox" [(ngModel)]="isChecked" name="checkbox">I would like to place an order
           <br>
 
           <div class="order" *ngIf="isChecked">
@@ -134,15 +139,14 @@
                 <option value="option3">custom</option>
               </select>
             <p>please describe your choice in the message box above</p>
-          </div> -->
+          </div>
 
-          <input type="submit" value="send">
-          <!-- <div class="submit">
+          <div class="submit">
             <button mat-raised-button type="submit">send</button>
 
-          </div> -->
+          </div>
 
-      </form>
+      </form> -->
     </div>
   </div>
 </div>

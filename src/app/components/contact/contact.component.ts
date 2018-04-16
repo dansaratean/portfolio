@@ -8,24 +8,24 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+  // encapsulation: ViewEncapsulation.None,
 })
 export class ContactComponent implements OnInit {
 
-  name: string;
-  email: string;
-  message: string;
-  isChecked: boolean;
-  option: string;
+  // name: string;
+  // email: string;
+  // message: string;
+  // isChecked: boolean;
+  // option: string;
 
-  // contactForm = new FormGroup({
-  //   name: new FormControl(),
-  //   // email: new FormControl('', [Validators.required, Validators.email]),
-  //   email: new FormControl(),
-  //   message: new FormControl(),
-  //   checkbox: new FormControl(),
-  //   select: new FormControl()
-  // });
+  contactForm = new FormGroup({
+    name: new FormControl(),
+    // email: new FormControl('', [Validators.required, Validators.email]),
+    email: new FormControl(),
+    message: new FormControl(),
+    checkbox: new FormControl(),
+    select: new FormControl()
+  });
 
   // user = {
   //   name: '',

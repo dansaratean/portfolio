@@ -12,7 +12,7 @@
 
   .left {
     height: 100%;
-    width: 30%;
+    width: 25%;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
@@ -21,8 +21,8 @@
 
     .contact-me {
       margin-top: 300px;
-      margin-right: 60px;
-      margin-bottom: 82px;
+      margin-right: 50px;
+      margin-bottom: 32px;
       font-family: AvenirLTStd-Roman;
       align-self: flex-end;
 
@@ -45,7 +45,7 @@
 
         ul li {
           padding: 5px 0 5px 5px;
-          margin-right: 60px;
+          margin-right: 50px;
           list-style-type: none;
         }
       }
@@ -65,7 +65,7 @@
 
     .cv {
       font-family: AvenirLTStd-Light;
-      margin-right: 60px;
+      margin-right: 50px;
       margin-top: 112px;
     }
   }
@@ -74,11 +74,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 70%;
+    width: 75%;
     height: 100%;
 
     .contact-form-wrapper {
-      margin-left: 60px;
+      margin-left: 50px;
 
       .contact-form {
         min-width: 320px;
@@ -118,7 +118,7 @@
 
     .contact-me {
       margin-top: 300px;
-      margin-left: 60px;
+      margin-left: 50px;
       margin-bottom: 50px;
       font-family: AvenirLTStd-Roman;
       align-self: flex-start;
