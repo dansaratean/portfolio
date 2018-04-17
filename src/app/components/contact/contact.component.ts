@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { FormControl, Validators, ReactiveFormsModule, FormGroup, NgForm } from '@angular/forms';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -12,12 +13,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent implements OnInit {
 
-  // name: string;
-  // email: string;
-  // message: string;
-  // isChecked: boolean;
-  // option: string;
-
   contactForm = new FormGroup({
     name: new FormControl(),
     // email: new FormControl('', [Validators.required, Validators.email]),
@@ -27,13 +22,6 @@ export class ContactComponent implements OnInit {
     select: new FormControl()
   });
 
-  // user = {
-  //   name: '',
-  //   email: '',
-  //   message: '',
-  //   option: ''
-  // }
-
   contact = {
     name: 'dan saratean',
     email: 'dansaratean10@gmail.com',
@@ -41,7 +29,7 @@ export class ContactComponent implements OnInit {
     phone: 'xxxxxxxxx',
   };
 
-  constructor(public router: Router, public http: HttpClient ) { }
+  constructor(public router: Router, public dialog: MatDialog) { }
 
   ngOnInit() {
   }
@@ -75,4 +63,27 @@ export class ContactComponent implements OnInit {
 
   }
 
+  openCV():void {
+    let dialogRef = this.dialog.open(ContactComponentDialog);
+  }
+
+}
+
+@Component({
+  selector: 'app-contact-dialog',
+  templateUrl: './contact-dialog.component.html',
+  styleUrls: ['./contact.component.scss'],
+})
+
+export class ContactComponentDialog {
+
+pdfSrc: string = './assets/files/cv.pdf';
+
+  constructor(
+    public dialog: MatDialogRef<ContactComponentDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
+
+    close(): void {
+      this.dialog.close();
+    }
 }

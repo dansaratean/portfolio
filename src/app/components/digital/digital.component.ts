@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, ViewEncapsulation } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+
+import { Card } from '../models/card-interface';
 
 @Component({
   selector: 'app-digital',
@@ -8,60 +11,99 @@ import { Component, OnInit } from '@angular/core';
 export class DigitalComponent implements OnInit {
 
   data = [
-    { src: './assets/images/digital/Ink.jpg',
-      name: '',
+    {
+      id: 1,
+      src: './assets/images/digital/Ink.jpg',
       title: 'Lady in black',
+      description: '',
     },
     {
+      id: 2,
       src: './assets/images/digital/Buddhist.jpg',
-      name: '',
-      title: 'Buddhist'
+      title: 'Buddhist',
+      description: ''
     },
     {
+      id: 3,
       src: './assets/images/digital/Domination.png',
-      name: '',
-      title: 'Domination'
+      title: 'Domination',
+      description: ''
     },
     {
+      id: 4,
       src: './assets/images/digital/ToPsy.jpg',
-      name: '',
-      title: 'Psychotic'
+      title: 'Psychotic',
+      description: ''
     },
     {
+      id: 5,
       src: './assets/images/digital/Dancing.jpg',
-      name: '',
-      title: 'Dancing'
+      title: 'Dancing',
+      description: ''
     },
     {
-      src: './assets/images/digital/dd.png',
-      name: '',
-      title: 'Shell'
+      id: 6,
+      src: './assets/images/digital/Shell.png',
+      title: 'Shell',
+      description: ''
     },
     {
+      id: 7,
       src: './assets/images/digital/Aleahim.jpg',
-      name: '',
-      title: 'Aleahim'
+      title: 'Aleahim',
+      description: ''
     },
     {
+      id: 8,
       src: './assets/images/digital/Godss.jpg',
-      name: '',
-      title: 'Godss'
+      title: 'Godss',
+      description: ''
     },
     {
+      id: 9,
       src: './assets/images/digital/SubstanceKiller.jpg',
-      name: '',
-      title: 'SubstanceKiller'
+      title: 'SubstanceKiller',
+      description: ''
     },
     {
+      id: 10,
       src: './assets/images/digital/Collage.jpg',
-      name: '',
-      title: 'Collage'
+      title: 'Collage',
+      description: ''
     }
   ]
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
+  openDialog(card: Card):void {
+    let dialogRef = this.dialog.open(DigitalComponentDialog, {
+      data: {
+        id: card.id,
+        src: card.src,
+        title: card.title,
+        description: card.description
+        }
+    });
+  }
+}
+
+@Component({
+  selector: 'app-digital-dialog',
+  templateUrl: './digital-dialog.component.html',
+  styleUrls: ['./digital.component.scss'],
+  encapsulation: ViewEncapsulation.None
+})
+
+export class DigitalComponentDialog {
+
+  constructor(
+    public dialog: MatDialogRef<DigitalComponentDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
+
+    close(): void {
+      this.dialog.close();
+    }
 }

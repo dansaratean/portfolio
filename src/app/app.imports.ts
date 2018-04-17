@@ -5,8 +5,9 @@ import { routing } from './app.routing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 export const imports = [
   BrowserModule, HttpClientModule, BrowserAnimationsModule, AppMaterialModule,
-  routing, ReactiveFormsModule, FormsModule
+  routing, ReactiveFormsModule, FormsModule, PdfViewerModule
 ];

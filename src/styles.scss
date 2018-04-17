@@ -41,6 +41,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 body {
@@ -52,4 +54,9 @@ body {
 html {
   background-color: #ffffff;
   overflow: hidden;
+}
+
+.close {
+  cursor: pointer;
+  float: left;
 }
