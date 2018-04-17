@@ -29,6 +29,8 @@ export class ContactComponent implements OnInit {
     phone: 'xxxxxxxxx',
   };
 
+  isChecked = false;
+
   constructor(public router: Router, public dialog: MatDialog) { }
 
   ngOnInit() {

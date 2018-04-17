@@ -30,20 +30,18 @@
     </div>
     <div class="contact-form-wrapper">
 
-      <h1>Form submission comming soon!</h1>
+      <!-- <h1>Form submission comming soon!</h1> -->
 
-      <!-- <form
+      <form
         class="contact-form"
         method="POST"
         action="https://formspree.io/claudiu.fratila@gmail.com">
             <input
-              [(ngModel)]="name"
               placeholder="name"
               type="text"
               name='name'>
           <br>
             <input
-              [(ngModel)]="email"
               placeholder="email"
               name='email'
               type='email'
@@ -51,16 +49,12 @@
           <br>
 
             <textarea
-              [(ngModel)]="message"
-              matTextareaAutosize
-              matAutosizeMinRows="1"
-              matAutosizeMaxRows="6"
               placeholder="message"
               name="message"
               type="text"
               required>
             </textarea>
-            <br />
+            <br>
 
 
           <input type="checkbox" [(ngModel)]="isChecked" name="checkbox">I would like to place an order
@@ -68,7 +62,7 @@
 
           <div class="order" *ngIf="isChecked">
 
-              <select [(value)]="selected" [(ngModel)]="option" placeholder="please select an option" name="option">
+              <select [(value)]="selected" placeholder="please select an option" name="option">
                 <option>none</option>
                 <option value="option1">portret</option>
                 <option value="option2">string-art</option>
@@ -80,7 +74,7 @@
 
           <input type="submit" value="send">
 
-      </form> -->
+      </form>
 
       <!-- <form
         class="contact-form"
