@@ -5,9 +5,12 @@ import { ContactComponent } from './components/contact/contact.component';
 import { DigitalComponent } from './components/digital/digital.component';
 import { DigitalComponentDialog } from './components/digital/digital.component';
 import { ContactComponentDialog } from './components/contact/contact.component';
+import { GraphicalComponent } from './components/graphical/graphical.component';
+import { GraphicalComponentDialog } from './components/graphical/graphical.component';
+
 
 export const components = [
   AppComponent, ContentComponent, NavbarComponent,
   ContactComponent, DigitalComponent, DigitalComponentDialog,
-  ContactComponentDialog
+  ContactComponentDialog, GraphicalComponent, GraphicalComponentDialog
 ];

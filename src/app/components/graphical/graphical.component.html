@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <div class="left">
+    Some stuff here
+  </div>
+  <div class="right">
+    <div class="right-wrapper">
+      <div class="card-wrapper" *ngFor="let card of data">
+        <mat-card>
+          <div class="image-wrapper">
+            <a (click)="openDialog(card)"><img mat-card-image src="{{ card.src }}" alt='No Image Available'></a>
+          </div>
+          <mat-card-title>{{ card.title }}</mat-card-title>
+          <p>
+            {{ card.year }}
+          </p>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

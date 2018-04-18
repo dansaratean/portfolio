@@ -15,61 +15,49 @@ export class DigitalComponent implements OnInit {
       id: 1,
       src: './assets/images/digital/Ink.jpg',
       title: 'Lady in black',
-      description: '',
+      year: '2015',
     },
     {
       id: 2,
       src: './assets/images/digital/Buddhist.jpg',
       title: 'Buddhist',
-      description: ''
+      year: '2016'
     },
     {
       id: 3,
       src: './assets/images/digital/Domination.png',
       title: 'Domination',
-      description: ''
+      year: '2016'
     },
     {
       id: 4,
       src: './assets/images/digital/ToPsy.jpg',
       title: 'Psychotic',
-      description: ''
+      year: '2016'
     },
     {
       id: 5,
       src: './assets/images/digital/Dancing.jpg',
       title: 'Dancing',
-      description: ''
+      year: '2015'
     },
     {
       id: 6,
       src: './assets/images/digital/Shell.png',
       title: 'Shell',
-      description: ''
+      year: '2016'
     },
     {
       id: 7,
       src: './assets/images/digital/Aleahim.jpg',
       title: 'Aleahim',
-      description: ''
+      year: '2017'
     },
     {
       id: 8,
       src: './assets/images/digital/Godss.jpg',
       title: 'Godss',
-      description: ''
-    },
-    {
-      id: 9,
-      src: './assets/images/digital/SubstanceKiller.jpg',
-      title: 'SubstanceKiller',
-      description: ''
-    },
-    {
-      id: 10,
-      src: './assets/images/digital/Collage.jpg',
-      title: 'Collage',
-      description: ''
+      year: '2016'
     }
   ]
 
@@ -81,10 +69,7 @@ export class DigitalComponent implements OnInit {
   openDialog(card: Card):void {
     let dialogRef = this.dialog.open(DigitalComponentDialog, {
       data: {
-        id: card.id,
-        src: card.src,
-        title: card.title,
-        description: card.description
+        src: card.src
         }
     });
   }

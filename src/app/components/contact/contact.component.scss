@@ -147,8 +147,9 @@
 
 .dialog-wrapper {
   height: 1000px;
+  width: auto;
 
-  pdf-viewer {
-
+  img {
+    object-fit: cover;
   }
 }

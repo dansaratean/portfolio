@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { components } from './app.components';
 import { imports } from './app.imports';
 
-
 import { AppComponent } from './root/app.component';
 
 @NgModule({
