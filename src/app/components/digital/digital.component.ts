@@ -14,50 +14,58 @@ export class DigitalComponent implements OnInit {
     {
       id: 1,
       src: './assets/images/digital/Ink.jpg',
-      title: 'Lady in black',
+      title: 'lady in black',
       year: '2015',
+      type: 'portret'
     },
     {
       id: 2,
       src: './assets/images/digital/Buddhist.jpg',
-      title: 'Buddhist',
-      year: '2016'
+      title: 'buddhist',
+      year: '2016',
+      type: 'portret'
     },
     {
       id: 3,
-      src: './assets/images/digital/Domination.png',
-      title: 'Domination',
-      year: '2016'
+      src: './assets/images/digital/ToPsy.jpg',
+      title: 'psychotic',
+      year: '2016',
+      type: 'portret'
     },
     {
       id: 4,
-      src: './assets/images/digital/ToPsy.jpg',
-      title: 'Psychotic',
-      year: '2016'
+      src: './assets/images/digital/Domination.png',
+      title: 'domination',
+      year: '2016',
+      type: 'psychedelic'
     },
     {
       id: 5,
       src: './assets/images/digital/Dancing.jpg',
-      title: 'Dancing',
-      year: '2015'
+      title: 'dancing',
+      year: '2015',
+      type: 'psychedelic'
     },
     {
       id: 6,
       src: './assets/images/digital/Shell.png',
-      title: 'Shell',
-      year: '2016'
+      title: 'shell',
+      year: '2016',
+      type: 'psychedelic'
     },
     {
       id: 7,
       src: './assets/images/digital/Aleahim.jpg',
-      title: 'Aleahim',
-      year: '2017'
+      title: 'aleahim',
+      year: '2017',
+      type: 'psychedelic'
     },
     {
       id: 8,
       src: './assets/images/digital/Godss.jpg',
-      title: 'Godss',
-      year: '2016'
+      title: 'godss',
+      year: '2016',
+      type: 'psychedelic'
     }
   ]
 

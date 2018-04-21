@@ -15,92 +15,114 @@ export class GraphicalComponent implements OnInit {
     {
       id: 1,
       src: './assets/images/graphical/portret1.jpg',
-      title: 'Sarai',
+      title: 'sarai',
       year: '2014',
+      type: 'portret'
     },
     {
       id: 2,
       src: './assets/images/graphical/portret2.jpg',
-      title: 'Artemis',
-      year: '2013'
+      title: 'artemis',
+      year: '2013',
+      type: 'portret'
     },
     {
       id: 3,
       src: './assets/images/graphical/portret3.jpg',
-      title: 'Diana',
-      year: '2014'
+      title: 'diana',
+      year: '2014',
+      type: 'portret'
     },
     {
       id: 4,
       src: './assets/images/graphical/portret4.jpg',
-      title: 'Suara',
-      year: '2017'
+      title: 'suara',
+      year: '2017',
+      type: 'portret'
     },
     {
       id: 5,
       src: './assets/images/graphical/tupac.jpg',
       title: '2pac',
-      year: '2016'
+      year: '2016',
+      type: 'portret'
     },
     {
       id: 6,
       src: './assets/images/graphical/taur.jpg',
-      title: 'Aries',
-      year: '2017'
+      title: 'aries',
+      year: '2017',
+      type: 'free-style'
     },
     {
       id: 7,
-      src: './assets/images/graphical/soare.jpg',
-      title: 'Sun',
-      year: '2017'
+      src: './assets/images/graphical/ram.jpg',
+      title: 'ram',
+      year: '2018',
+      type: 'free-style'
     },
     {
       id: 8,
-      src: './assets/images/graphical/tunes1.jpg',
-      title: 'Wild Wild West',
-      year: '2016'
+      src: './assets/images/graphical/soare.jpg',
+      title: 'sun',
+      year: '2017',
+      type: 'psychedelic'
     },
     {
       id: 9,
-      src: './assets/images/graphical/tunes2.jpg',
-      title: 'Tom & Jerry',
-      year: '2016'
+      src: './assets/images/graphical/tunes1.jpg',
+      title: 'wild wild west',
+      year: '2016',
+      type: 'characters'
     },
     {
       id: 10,
-      src: './assets/images/graphical/tunes3.jpg',
-      title: 'Love',
-      year: '2016'
+      src: './assets/images/graphical/tunes2.jpg',
+      title: 'tom & jerry',
+      year: '2016',
+      type: 'characters'
     },
     {
       id: 11,
-      src: './assets/images/graphical/graf1.jpg',
-      title: 'Hydro_1',
-      year: '2016'
+      src: './assets/images/graphical/tunes3.jpg',
+      title: 'love',
+      year: '2016',
+      type: 'characters'
     },
     {
       id: 12,
-      src: './assets/images/graphical/graf2.jpg',
-      title: 'Hydro_2',
-      year: '2016'
+      src: './assets/images/graphical/graf1.jpg',
+      title: 'hydro_1',
+      year: '2016',
+      type: 'grafitti'
     },
     {
       id: 13,
-      src: './assets/images/graphical/graf3.jpg',
-      title: 'Bliss',
-      year: '2016'
+      src: './assets/images/graphical/graf2.jpg',
+      title: 'hydro_2',
+      year: '2016',
+      type: 'grafitti'
     },
     {
       id: 14,
-      src: './assets/images/graphical/Collage.jpg',
-      title: 'Characters',
-      year: '2017'
+      src: './assets/images/graphical/graf3.jpg',
+      title: 'bliss',
+      year: '2016',
+      type: 'grafitti'
     },
     {
       id: 15,
+      src: './assets/images/graphical/Collage.jpg',
+      title: 'characters',
+      year: '2017',
+      type: 'characters'
+    },
+    {
+      id: 16,
       src: './assets/images/graphical/SubstanceKiller.jpg',
-      title: 'Substance Killer',
-      year: '2016'
+      title: 'substance Killer',
+      year: '2016',
+      type: 'psychedelic'
     }
   ]
 

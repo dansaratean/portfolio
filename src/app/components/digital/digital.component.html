@@ -1,6 +1,9 @@
 <div class="wrapper">
   <div class="left">
     Some stuff here
+    <div class="design">
+      design & code &#169; <a href="https://www.linkedin.com/in/sorinfratila/">sorin</a>
+    </div>
   </div>
   <div class="right">
     <div class="right-wrapper">
@@ -10,9 +13,14 @@
             <a (click)="openDialog(card)"><img mat-card-image src="{{ card.src }}" alt='No Image Available'></a>
           </div>
           <mat-card-title>{{ card.title }}</mat-card-title>
-          <p>
-            {{ card.year }}
-          </p>
+          <div class="footer-wrapper">
+            <p>
+              {{ card.year }}
+            </p>
+            <p>
+              {{ card.type }}
+            </p>
+          </div>
         </mat-card>
       </div>
     </div>

@@ -6,17 +6,22 @@
   position: absolute;
   width: 100%;
   background-color: #ffffff;
-  // justify-content: center;
   align-items: center;
 
   .left {
     height: 100%;
     width: 25%;
-    background-color: #F2F2F2;
+    background-color: #A0A0A0;
     display: flex;
     flex-direction: column;
     font-family: AvenirLTStd-Roman;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .design {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   .right {
@@ -52,10 +57,14 @@
             font-family: AvenirLTStd-Roman;
           }
 
-          p {
-            padding-left: 15px;
-            width: 100%;
+          .footer-wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+            padding: 0 15px;
             font-family: AvenirLTStd-Light;
+            }
           }
 
           .image-wrapper {
@@ -115,8 +124,8 @@
 .dialog-wrapper {
 
   .dialog-container {
-    max-width: 1500px;
-    max-height: 950px;
+    max-width: 1250px;
+    max-height: 850px;
 
     img {
       align-items: center;
