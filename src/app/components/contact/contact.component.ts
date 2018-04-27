@@ -13,6 +13,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent implements OnInit {
 
+  submitted = false;
+  name: string;
+  email: string;
+  message: string;
+  option: string;
+
   contactForm = new FormGroup({
     name: new FormControl(),
     // email: new FormControl('', [Validators.required, Validators.email]),
@@ -31,22 +37,22 @@ export class ContactComponent implements OnInit {
 
   isChecked = false;
 
-  constructor(public router: Router, public dialog: MatDialog) { }
+  constructor(public router: Router, public dialog: MatDialog,
+              public http: HttpClient) { }
 
   ngOnInit() {
   }
 
-  onSubmit() {
-    // this.submitted = true;
+  onSubmit(form: NgForm) {
+    this.submitted = true;
 
-    // console.log(this.name);
-    // console.log(this.email);
-    // console.log(this.message);
-    // console.log(this.isChecked);
-    // console.log(this.option);
-    // console.log('FORM.VALUE: ' + form.value.name);
-    // this.user.name = form.value.contactForm.name;
-    //
+    console.log(this.name);
+    console.log(this.email);
+    console.log(this.message);
+    console.log(this.isChecked);
+    console.log(this.option);
+    console.log('FORM.VALUE: ' + form.value.name);
+
   //   this.http.post("https://formspree.io/claudiu.fratila@gmail.com", {
   //     name: form.value.name,
   //     email: form.value.email,

@@ -116,22 +116,3 @@
 /*****************************************************************************
                               Digital Dialog Style
 ******************************************************************************/
-
-.mat-dialog-container {
-  padding: 0 5px 5px 5px;
-}
-
-.dialog-wrapper {
-
-  .dialog-container {
-    max-width: 1250px;
-    max-height: 850px;
-
-    img {
-      align-items: center;
-      object-fit: scale-down;
-      max-height: 100%;
-      max-width: 100%;
-    }
-  }
-}

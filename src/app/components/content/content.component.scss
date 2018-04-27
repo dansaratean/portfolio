@@ -11,8 +11,8 @@
 
   .left {
     height: 100%;
-    width: 25%;
-    background-color: #A0A0A0;
+    width: 30%;
+    background-color: #C0C0A5;
     display: flex;
     flex-direction: column;
     font-family: AvenirLTStd-Roman;
@@ -26,7 +26,7 @@
   }
 
   .right {
-    width: 75%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -39,35 +39,38 @@
       .left-panel {
         width: 6%;
         height: 100%;
-        background-color: #B0B0B0;
-        // border-right: 1px solid white;
+        background-color: #F0F0F0;
+        border: 1px solid white;
       }
 
       .left-middle-panel {
         width: 6%;
         height: 100%;
-        background-color: #C0C0C0;
+        background-color: #E0E0E0;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
       }
 
       .middle-panel {
         width: 6%;
         height: 100%;
         background-color: #D0D0D0;
-        // border-left: 1px solid white;
-        // border-right: 1px solid white;
+        border: 1px solid white;
       }
 
       .right-middle-panel {
         width: 6%;
         height: 100%;
-        background-color: #E0E0E0;
+        background-color: #C0C0C0;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
       }
 
       .right-panel {
         width: 6%;
         height: 100%;
-        background-color: #F0F0F0;
-        // border-left: 1px solid white;
+        background-color: #B0B0B0;
+        border: 1px solid white;
       }
 
       .image-wrapper {
@@ -79,6 +82,8 @@
           position: absolute;
           width: 100%;
           height: 100%;
+          -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
         }
       }
     }
@@ -103,36 +108,39 @@
         .top-panel {
           width: 100%;
           height: 20%;
-          background-color: #F0F0F0;
-          // border-top: 1px solid white;
-          // border-bottom: 1px solid white;
+          background-color: #8E9185;
+          border: 1px solid white;
         }
 
         .top-middle-panel {
           width: 100%;
           height: 20%;
-          background-color: #E0E0E0;
+          background-color: #7E8174;
+          border-left: 1px solid white;
+          border-right: 1px solid white;
         }
 
         .middle-panel {
           width: 100%;
           height: 20%;
-          background-color: #D0D0D0;
-          // border-top: 1px solid white;
-          // border-bottom: 1px solid white;
+          background-color: #6E7262;
+          border: 1px solid white;
         }
 
         .bottom-middle-panel {
           width: 100%;
           height: 20%;
-          background-color: #C0C0C0;
+          background-color: #5E6251;
+          border-left: 1px solid white;
+          border-right: 1px solid white;
         }
 
         .bottom-panel {
           width: 100%;
           height: 20%;
-          background-color: #B0B0B0;
-          // border-top: 1px solid white;
+          background-color: #4E5340;
+          border: 1px solid white;
+
         }
       }
     }
