@@ -31,12 +31,13 @@
     </div>
 
     <div class="contact-form-wrapper">
-      <form class='contact-form' novalidate>
+      <form class='contact-form' novalidate #f="ngForm" (ngSubmit)="onSubmit(f)">
         <mat-form-field class='full-width'>
           <input
             matInput
             placeholder="name"
             name='name'
+            ngModel
             required>
         </mat-form-field>
 
@@ -45,6 +46,7 @@
             matInput
             placeholder="email"
             name='email'
+            ngModel
             required>
         </mat-form-field>
 
@@ -56,6 +58,7 @@
             matAutosizeMinRows="1"
             matAutosizeMaxRows="8"
             name='message'
+            ngModel
             required></textarea>
         </mat-form-field>
 
@@ -67,20 +70,22 @@
 
           <div class="order" *ngIf="isChecked">
             <mat-form-field>
-              <mat-select placeholder="select an option" name="option">
-                <mat-option>none</mat-option>
-                <mat-option value="optio1">portret</mat-option>
-                <mat-option value="optin2">string-art</mat-option>
-                <mat-option value="opton2">digital</mat-option>
-                <mat-option value="opion3">custom</mat-option>
+              <mat-select placeholder="select an option" name="order" ngModel>
+                <mat-option value="none">none</mat-option>
+                <mat-option value="portret">portret</mat-option>
+                <mat-option value="string-art">string-art</mat-option>
+                <mat-option value="digital">digital</mat-option>
+                <mat-option value="custom">custom</mat-option>
               </mat-select>
             </mat-form-field>
             <p>please describe your choice in the message box above</p>
           </div>
 
           <div class="submit">
-            <button mat-raised-button type="submit">send</button>
+            <button mat-raised-button type="submit" [disabled]="f.invalid">send</button>
           </div>
+
+          <p>{{ f.value | json }}</p>
 
       </form>
     </div>

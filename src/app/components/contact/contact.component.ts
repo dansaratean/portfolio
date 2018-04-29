@@ -1,9 +1,11 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { FormControl, Validators, ReactiveFormsModule, FormGroup, NgForm } from '@angular/forms';
+import { FormsModule, FormGroup, NgForm } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
+
+import { Message } from '../models/message-interface';
 
 @Component({
   selector: 'app-contact',
@@ -13,29 +15,30 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent implements OnInit {
 
-  submitted = false;
-  name: string;
-  email: string;
-  message: string;
-  option: string;
-
-  contactForm = new FormGroup({
-    name: new FormControl(),
-    // email: new FormControl('', [Validators.required, Validators.email]),
-    email: new FormControl(),
-    message: new FormControl(),
-    checkbox: new FormControl(),
-    select: new FormControl()
-  });
-
-  contact = {
-    name: 'dan saratean',
-    email: 'dansaratean10@gmail.com',
-    address: 'Somewhere in Floresti',
-    phone: 'xxxxxxxxx',
+  message: Message = {
+    name: '',
+    email: '',
+    message: '',
+    checkbox: false,
+    order: 'none'
   };
 
   isChecked = false;
+
+  // submitted = false;
+  // name: string;
+  // email: string;
+  // // message: string;
+  // option: string;
+
+  // contactForm = new FormGroup({
+  //   name: new FormControl(),
+  //   // email: new FormControl('', [Validators.required, Validators.email]),
+  //   email: new FormControl(),
+  //   message: new FormControl(),
+  //   checkbox: new FormControl(),
+  //   select: new FormControl()
+  // });
 
   constructor(public router: Router, public dialog: MatDialog,
               public http: HttpClient) { }
@@ -44,16 +47,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    this.submitted = true;
-
-    console.log(this.name);
-    console.log(this.email);
-    console.log(this.message);
-    console.log(this.isChecked);
-    console.log(this.option);
-    console.log('FORM.VALUE: ' + form.value.name);
-
-  //   this.http.post("https://formspree.io/claudiu.fratila@gmail.com", {
+      //   this.http.post("https://formspree.io/claudiu.fratila@gmail.com", {
   //     name: form.value.name,
   //     email: form.value.email,
   //     message: form.value.message,
@@ -68,7 +62,6 @@ export class ContactComponent implements OnInit {
     //   res => { console.log(res); },
     //   err => { console.log(err); }
     // )
-
   }
 
   openCV():void {

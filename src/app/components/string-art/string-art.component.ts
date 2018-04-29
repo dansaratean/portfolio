@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+
+import { Card } from '../models/card-interface';
 
 @Component({
   selector: 'app-string-art',
@@ -52,9 +55,35 @@ export class StringArtComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
+  openDialog(card: Card):void {
+    let dialogRef = this.dialog.open(StringArtComponentDialog, {
+      data: {
+        src: card.src
+        }
+    });
+  }
+
+}
+
+@Component({
+  selector: 'app-string-art-dialog',
+  templateUrl: './string-art-dialog.component.html',
+  styleUrls: ['./string-art.component.scss'],
+  encapsulation: ViewEncapsulation.None
+})
+
+export class StringArtComponentDialog {
+
+  constructor(
+    public dialog: MatDialogRef<StringArtComponentDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
+
+    close(): void {
+      this.dialog.close();
+    }
 }

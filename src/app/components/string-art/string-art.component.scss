@@ -19,6 +19,7 @@
     align-items: flex-start;
 
     .design {
+      font-size: 18px;
       margin-left: 20px;
       margin-bottom: 20px;
     }
@@ -116,5 +117,24 @@
 }
 
 /*****************************************************************************
-                              Digital Dialog Style
+                              String-Art Dialog Style
 ******************************************************************************/
+
+.mat-dialog-container {
+  padding: 0 5px 5px 5px;
+}
+
+.dialog-wrapper {
+
+  .dialog-container {
+    max-width: 1250px;
+    max-height: 850px;
+
+    img {
+      align-items: center;
+      object-fit: scale-down;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+}
