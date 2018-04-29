@@ -19,6 +19,15 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    .summary {
+      width: 70%;
+      align-self: flex-end;
+      text-align: justify;
+      margin-top: 60px;
+      font-size: 18px;
+      margin-right: 20px;
+    }
+
     .design {
       margin-left: 20px;
       margin-bottom: 20px;
@@ -82,8 +91,8 @@
           position: absolute;
           width: 100%;
           height: 100%;
-          -webkit-filter: grayscale(70%);
-          filter: grayscale(70%);
+          -webkit-filter: grayscale(60%);
+          filter: grayscale(60%);
         }
       }
     }
@@ -108,14 +117,14 @@
         .top-panel {
           width: 100%;
           height: 20%;
-          background-color: #8E9185;
+          background-color: #CED0CA;
           border: 1px solid white;
         }
 
         .top-middle-panel {
           width: 100%;
           height: 20%;
-          background-color: #7E8174;
+          background-color: #AEB0A8;
           border-left: 1px solid white;
           border-right: 1px solid white;
         }
@@ -123,14 +132,14 @@
         .middle-panel {
           width: 100%;
           height: 20%;
-          background-color: #6E7262;
+          background-color: #8E9185;
           border: 1px solid white;
         }
 
         .bottom-middle-panel {
           width: 100%;
           height: 20%;
-          background-color: #5E6251;
+          background-color: #6E7262;
           border-left: 1px solid white;
           border-right: 1px solid white;
         }

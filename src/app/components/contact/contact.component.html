@@ -1,27 +1,28 @@
 <div class="wrapper">
   <div class="left">
-    <div class="contact-me">
-      <p>contact me</p>
-    </div>
-    <div class="visit-card">
-      <div class="data">
-        <ul>
-          <li><p>{{ contact.name }}</p></li>
-          <li><p>{{ contact.email }}</p></li>
-          <li><p>{{ contact.phone }}</p></li>
-        </ul>
+      <div class="contact-me">
+        <p class='text'>contact me</p>
+        <div class="phone-wrapper">
+          <p><strong>+40</strong> 766 635 967</p>
+          <img src="./assets/images/socialMedia/phone.png" alt="phone">
+        </div>
       </div>
-      <div class="title">
-        <ul>
-          <li><p>name</p></li>
-          <li><p>email</p></li>
-          <li><p>phone</p></li>
-        </ul>
+
+      <div class="social-media-wrapper">
+        <div class="social-media">
+          <div class="facebook"><a target="_blank" href="https://www.facebook.com/DelysidDesign/"><img src="./assets/images/socialMedia/facebook.png" alt="facebook"></a></div>
+          <div class="instagram"><a target="_blank" href=""><img src="./assets/images/socialMedia/instagram2.png" alt="instagram"></a></div>
+          <div class="email"><a href="mailto:sarateandan@gmail.com"><img src="./assets/images/socialMedia/email.png" alt="email"></a></div>
+        </div>
       </div>
-    </div>
-    <div class="cv">
-      <button mat-raised-button (click)="openCV()">cv</button>
-    </div>
+
+      <div class="cv">
+        <button mat-raised-button (click)="openCV()">cv</button>
+      </div>
+
+      <div class="design">
+        design & code &#169; <a href="https://www.linkedin.com/in/sorinfratila/">sorin</a>
+      </div>
   </div>
   <div class="right">
     <div class="contact-me">
@@ -53,13 +54,14 @@
             placeholder="message"
             matTextareaAutosize
             matAutosizeMinRows="1"
-            matAutosizeMaxRows="6"
+            matAutosizeMaxRows="8"
             name='message'
             required></textarea>
         </mat-form-field>
 
         <mat-checkbox
           name='checkbox'
+          color="primary"
           [(ngModel)]="isChecked">I would like to place an order
         </mat-checkbox>
 
