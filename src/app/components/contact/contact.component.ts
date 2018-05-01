@@ -25,21 +25,6 @@ export class ContactComponent implements OnInit {
 
   isChecked = false;
 
-  // submitted = false;
-  // name: string;
-  // email: string;
-  // // message: string;
-  // option: string;
-
-  // contactForm = new FormGroup({
-  //   name: new FormControl(),
-  //   // email: new FormControl('', [Validators.required, Validators.email]),
-  //   email: new FormControl(),
-  //   message: new FormControl(),
-  //   checkbox: new FormControl(),
-  //   select: new FormControl()
-  // });
-
   constructor(public router: Router, public dialog: MatDialog,
               public http: HttpClient) { }
 
@@ -47,21 +32,18 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-      //   this.http.post("https://formspree.io/claudiu.fratila@gmail.com", {
-  //     name: form.value.name,
-  //     email: form.value.email,
-  //     message: form.value.message,
-  //     check: form.value.checkbox,
-  //     option: form.value.select
-  // }).subscribe(
-  //     res => { console.log(res); },
-  //     err => { console.log(err); }
-  //   )
+    console.log(form.value);
 
-    // this.http.post("https://formspree.io/claudiu.fratila@gmail.com", form.value.name).subscribe(
-    //   res => { console.log(res); },
-    //   err => { console.log(err); }
-    // )
+      this.http.post("https://formcarry.com/s/rkQpNX86M", {
+      Name: form.value.name,
+      Email: form.value.email,
+      Message: form.value.message,
+      Checkbox: form.value.checkbox,
+      Order: form.value.order
+  }).subscribe(
+      res => { console.log(res); },
+      err => { console.log(err); }
+    )
   }
 
   openCV():void {
