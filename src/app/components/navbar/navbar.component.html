@@ -9,16 +9,16 @@
 
     <mat-menu #menu="matMenu" [overlapTrigger]="false">
       <ul>
-        <!-- <button mat-menu-item>about</button> -->
-        <button mat-menu-item routerLink='/graphical' routerLinkActive='active'>graphical</button>
-        <button mat-menu-item routerLink='/digital' routerLinkActive='active'>digital</button>
-        <button mat-menu-item routerLink='/string-art' routerLinkActive='active'>string art</button>
-        <button mat-menu-item routerLink='/contact' routerLinkActive='active'>contact</button>
+        <button mat-menu-item routerLink='/content'>home</button>
+        <button mat-menu-item routerLink='/graphical'>graphical</button>
+        <button mat-menu-item routerLink='/digital'>digital</button>
+        <button mat-menu-item routerLink='/string-art'>string art</button>
+        <button mat-menu-item routerLink='/contact'>contact</button>
       </ul>
     </mat-menu>
 
     <ul>
-      <!-- <a ><li>about</li></a> -->
+      <a routerLink='/content'><li>home</li></a>
       <a routerLink='/graphical' routerLinkActive='active'><li>graphical</li></a>
       <a routerLink='/digital' routerLinkActive='active'><li>digital</li></a>
       <a routerLink='/string-art' routerLinkActive='active'><li>string art</li></a>
