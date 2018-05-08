@@ -120,7 +120,7 @@ export class GraphicalComponent implements OnInit {
     {
       id: 16,
       src: './assets/images/graphical/SubstanceKiller.jpg',
-      title: 'substance Killer',
+      title: 'substance killer',
       year: '2016',
       type: 'psychedelic'
     }

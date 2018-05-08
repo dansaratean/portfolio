@@ -35,15 +35,15 @@ export class ContactComponent implements OnInit {
     console.log(form.value);
 
       this.http.post("https://formcarry.com/s/rkQpNX86M", {
-      Name: form.value.name,
-      Email: form.value.email,
-      Message: form.value.message,
-      Checkbox: form.value.checkbox,
-      Order: form.value.order
-  }).subscribe(
-      res => { console.log(res); },
-      err => { console.log(err); }
-    )
+        Name: form.value.name,
+        Email: form.value.email,
+        Message: form.value.message,
+        Checkbox: form.value.checkbox,
+        Order: form.value.order
+      }).subscribe(
+        res => { console.log(res); },
+        err => { console.log(err); }
+      )
   }
 
   openCV():void {
